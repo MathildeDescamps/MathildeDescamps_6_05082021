@@ -1,0 +1,266 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 65%;
+  position: absolute;
+  top: 40px;
+  margin-left: 70px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header img {
+  width: 25%;
+  height: auto;
+}
+
+header nav .nav-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  color: #911C1C;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header nav .nav-tags li {
+  border: 0.5px solid #C4C4C4;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+main {
+  width: 100%;
+}
+
+main h1 {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  margin-right: 70px;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 35%;
+  text-align: right;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 47px;
+  color: #911C1C;
+}
+
+main #photographs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: absolute;
+  top: 170px;
+  max-width: 100%;
+  margin: auto;
+}
+
+main #photographs .photograph {
+  width: 33.3333%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #photographs .photograph a {
+  text-decoration: none;
+}
+
+main #photographs .photograph a .photograph-container {
+  width: 350px;
+  padding: 20px;
+  border-radius: 15%;
+}
+
+main #photographs .photograph a .photograph-container img {
+  max-width: 200px;
+  max-height: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+main #photographs .photograph a .photograph-container .name {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 47px;
+  text-align: center;
+  color: #D3573C;
+}
+
+main #photographs .photograph a .photograph-container .location {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 17px;
+  text-align: center;
+  color: #901C1C;
+}
+
+main #photographs .photograph a .photograph-container .tagline {
+  color: black;
+  font-size: 15px;
+}
+
+main #photographs .photograph a .photograph-container .price {
+  color: #757575;
+}
+
+main #photographs .photograph a .photograph-container .taglist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  color: #911C1C;
+  padding-left: 0;
+}
+
+main #photographs .photograph a .photograph-container .taglist li {
+  border: 0.5px solid #C4C4C4;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+main #photographs .photograph a:hover .photograph-container {
+  cursor: pointer;
+}
+
+main #photographs .photograph a:hover .photograph-container .name {
+  font-weight: bold;
+  color: #ff6f4f;
+}
+
+.banner {
+  max-width: 80%;
+  margin: auto;
+}
+
+.banner .logo {
+  max-width: 200px;
+  margin-top: 30px;
+}
+
+.profilePage {
+  max-width: 80%;
+  margin: auto;
+}
+
+.profilePage .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #FAFAFA;
+}
+
+.profilePage .intro .left-part h1 {
+  font-size: 38px;
+  color: #D3573C;
+  margin-top: 0;
+}
+
+.profilePage .intro .left-part .location {
+  color: #901C1C;
+  font-size: 20px;
+}
+
+.profilePage .intro .left-part .tagline {
+  color: #525252;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.profilePage .intro .left-part .taglist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  color: #911C1C;
+  padding-left: 0;
+}
+
+.profilePage .intro .left-part .taglist li {
+  border: 0.5px solid #C4C4C4;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.profilePage .intro .center-part button {
+  background-color: #901C1C;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.profilePage .intro .right-part img {
+  max-width: 200px;
+  max-height: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.gallery-wrapper .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  width: 90%;
+  margin: auto;
+}
+/*# sourceMappingURL=main.css.map */

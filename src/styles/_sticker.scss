@@ -1,0 +1,28 @@
+.sticker-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 110%;
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    .sticker {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #DB8876;
+        width: -moz-fit-content;
+        width: fit-content;
+        padding-inline: 35px;
+        margin-right: 50px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        .likes {
+            padding-right: 30px;
+            display: flex;
+            align-items: center;
+            span {
+                padding-left: 5px;
+            }
+        }
+    }
+}

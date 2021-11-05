@@ -1,0 +1,146 @@
+.banner {
+    max-width: 80%;
+    margin: auto;
+    .logo {
+        max-width: 200px;
+        margin-top: 30px;
+    }
+}
+.profilePage {
+    max-width: 80%;
+    margin: auto;
+    #form-wrapper {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background-color: rgba(123, 121, 121, 0.598);
+        form {
+            display: flex;  
+            flex-direction: column;
+            width: 30%;
+            height: fit-content;
+            background-color: #DB8876;
+            padding-inline: 40px;
+            padding-bottom: 30px;
+            .form-header {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: baseline;
+            }
+            h3 {
+                font-size: 40px;
+                line-height: 60px;
+                font-weight: normal;
+            }
+            label {
+                font-size: 22px;
+                color: #312E2E;
+                margin-bottom: 5px;
+                margin-top: 15px;
+            }
+            input, textarea {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                border: none;
+                min-height: 45px;
+            }
+            textarea {
+                min-height: 80px;
+            }
+            input[type="submit"] {
+                background: #911C1C;
+                border-radius: 5px;
+                padding-inline: 45px;
+                color: #FFFFFF;
+                width: fit-content;
+                border: none;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                margin-top: 15px;
+            }
+            button {
+                color: #FFFFFF;
+                background: none;
+                border: none;
+                font-size: 20px;
+            }
+        }
+    }
+    .intro {
+        display: flex;
+        max-width: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 50px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: #FAFAFA;
+        .left-part {
+            h1 {
+                font-size: 38px;
+                color: #D3573C;
+                margin-top: 0;
+            }
+            .location {
+                color: #901C1C;
+                font-size: 20px;
+            }
+            .tagline {
+                color: #525252;
+                font-size: 16px;
+                font-weight: 100;
+            }
+            .taglist {
+                display: flex;
+                list-style: none;
+                color: #911C1C;
+                padding-left: 0;
+                li {
+                    border: 0.5px solid #C4C4C4;
+                    border-radius: 20px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .center-part {
+            button {
+                background-color: #901C1C;
+                color: white;
+                font-weight: bold;
+                font-size: 15px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 20px;
+                padding-right: 20px;
+                border: none;
+                border-radius: 5px;
+            }
+        }
+        .right-part {
+            img {
+                max-width: 200px;
+                max-height: 200px;
+                min-width: 200px;
+                min-height: 200px;
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+                object-fit: cover;
+          }
+        }
+    }
+}
