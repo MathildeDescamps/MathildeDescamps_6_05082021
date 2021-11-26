@@ -1,5 +1,4 @@
-import Header from './Header';
-import Photographes from './Photographes';
+import Home from './Home';
 import Banner from './Banner';
 import Photograph from './Photograph';
 import data from '../data/data';
@@ -21,8 +20,7 @@ function App() {
       </div>
       <Switch>
         <Route exact path="/">
-          <Header />
-          <Photographes url={publicUrl} photographers={photographers}/>
+          <Home url={publicUrl} photographers={photographers}/>
         </Route>
         <Route path='/profile/:profileId'>
           <Banner />

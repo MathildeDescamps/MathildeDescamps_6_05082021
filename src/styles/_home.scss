@@ -1,0 +1,232 @@
+* {
+  z-index: 1;
+  &:focus {
+    outline: 2px solid #901C1C;
+  }
+}
+main {
+  width: 100%;
+  h1 {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    margin-right: 70px;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 35%;
+    text-align: right;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 47px;
+    color: #901C1C;
+  }
+  #photographs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 170px;
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+    .photograph {
+      width: 33.3333%;
+      margin: auto;
+      text-align: center;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+      .photograph-container {
+        width: 350px;
+        padding: 20px;
+        border-radius: 15%;
+        a {
+          text-decoration: none;
+          img {
+            max-width: 200px;
+            max-height: 200px;
+            min-width: 200px;
+            min-height: 200px;
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          .name {
+            font-weight: normal;
+            font-size: 36px;
+            line-height: 47px;
+            text-align: center;
+            color: #D3573C;
+          }
+          &:hover {
+            cursor: pointer;
+            .name {
+              font-weight: bold;
+              color: #ff6f4f;
+            }
+          }
+        }
+        .location {
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 17px;
+          text-align: center;
+          color: #901C1C;
+        }
+        .tagline {
+          color: black;
+          font-size: 15px;
+        }
+        .price {
+          color: #757575;
+        }
+        .taglist {
+          display: flex;
+          justify-content: center;
+          list-style: none;
+          color: #901C1C;
+          padding-left: 0;
+          li {
+              border: 0.5px solid #C4C4C4;
+              border-radius: 20px;
+              padding-left: 10px;
+              padding-right: 10px;
+              padding-top: 5px;
+              padding-bottom: 5px;
+              margin-left: 5px;
+              margin-right: 5px;
+              &:hover, &:focus {
+                background-color: #901C1C;
+                color: #FFF;
+                border: #901C1C;
+                cursor: pointer;
+                outline: none;
+              }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+    >a {
+      width: 50%;
+      text-align: center;
+      img {
+        max-width: 60%;
+      }
+    }
+  }
+  main {
+    >h1 {
+      position: relative;
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      top: 205px;
+    }
+    #photographs {
+      flex-direction: column;
+      margin-top: 80px;
+      .photograph {
+        width: auto;
+        max-width: 80%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    nav {
+      .nav-tags {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+        padding-left: 0;
+        margin-top: 10px;
+        li {
+          margin-top: 10px;
+        }
+      }
+    }
+    >a {
+      img {
+        max-width: 75%;
+      }
+    }
+    main {
+      h1 {
+        top: 215px;
+      }
+      #photographs {
+        margin-top: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 607px) {
+  main {
+    #photographs {
+      margin-top: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  main {
+    #photographs {
+      margin-top: 170px;
+      .photograph {
+        max-width: 90%;
+        .photograph-container {
+          width: 100%;
+          padding: 0;
+          .taglist {
+            flex-wrap: wrap;
+            li {
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+    h1 {
+      font-size: 20px;
+      line-height: 1.4;
+      top: 264px;
+    }
+  }
+}
+
+@media screen and (max-width: 280px) {
+  header {
+    nav {
+      .nav-tags {
+        li {
+          font-size: 12px;
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+  main {
+    h1 {
+      font-size: 16px;
+      top: 238px;
+    }
+    #photographs {
+      margin-top: 145px;
+    }
+  }
+}

@@ -21,7 +21,7 @@ header nav .nav-tags {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  color: #911C1C;
+  color: #901C1C;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -54,7 +54,7 @@ main h1 {
   font-weight: normal;
   font-size: 26px;
   line-height: 47px;
-  color: #911C1C;
+  color: #901C1C;
 }
 
 main #photographs {
@@ -136,7 +136,7 @@ main #photographs .photograph a .photograph-container .taglist {
       -ms-flex-pack: center;
           justify-content: center;
   list-style: none;
-  color: #911C1C;
+  color: #901C1C;
   padding-left: 0;
 }
 
@@ -216,7 +216,7 @@ main #photographs .photograph a:hover .photograph-container .name {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  color: #911C1C;
+  color: #901C1C;
   padding-left: 0;
 }
 

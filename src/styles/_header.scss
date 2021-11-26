@@ -1,19 +1,50 @@
+.backToTop {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  button {
+    background: #DB8876;
+    border-radius: 5px;
+    border: none;
+    padding-inline: 15px;
+    padding-top: 5px;
+    padding-bottom: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+    &:hover {
+      background-color: #901C1C;
+      color: #FFF;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
 header {
   display: flex;
-  width: 65%;
+  width: 69.5%;
   position: absolute;
   top: 40px;
   margin-left: 70px;
   justify-content: space-between;
-  img {
-    width: 25%;
-    height: auto;
+  a {
+    width: 20%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    &:hover {
+      cursor: pointer; 
+    }
   }
   nav  {
     .nav-tags {
       display: flex;
       list-style: none;
-      color: #911C1C;
+      color: #901C1C;
       justify-content: flex-end;
       li {
         border: 0.5px solid #C4C4C4;
@@ -24,6 +55,14 @@ header {
         padding-bottom: 5px;
         margin-left: 5px;
         margin-right: 5px;
+        text-transform: capitalize;
+        &:hover, &:focus {
+          background-color: #901C1C;
+          color: #FFF;
+          border: #901C1C;
+          cursor: pointer;
+          outline: none;
+        }
       }
     }
   }

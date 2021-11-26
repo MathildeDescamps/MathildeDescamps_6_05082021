@@ -4,7 +4,7 @@
     "sources": [
         "main.scss",
         "styles/_header.scss",
-        "styles/_photographes.scss",
+        "styles/_home.scss",
         "styles/_photograph.scss",
         "styles/_gallery.scss"
     ],
