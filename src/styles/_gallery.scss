@@ -28,6 +28,7 @@
         flex-wrap: wrap;
         .media {
             overflow: hidden;
+            width: 30.5%;
             max-width: 30.5%;
             max-height: 350px;
             margin-bottom: 30px;
@@ -55,6 +56,33 @@
                         margin-right: 3px;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media  screen and (max-width: 1330px) {
+    .gallery-wrapper {
+        .gallery {
+            justify-content: center;
+            .media {
+                width: 46%;
+                max-width: 46%;
+                max-height: 450px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 937px) {
+    .gallery-wrapper {
+        .gallery {
+            justify-content: center;
+            .media {
+                width: 100%;
+                max-width: 100%;
+                max-height: 350px;
+                margin-inline: 0;
             }
         }
     }
