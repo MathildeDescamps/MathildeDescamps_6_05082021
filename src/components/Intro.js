@@ -1,11 +1,11 @@
 function Intro(props) {
     return (
         <>
-        <div id="form-wrapper">
+        <div id="form-wrapper" aria-label={"Contact me "+ props.profile.name }>
             <form onSubmit={(e) => e.preventDefault()} >    
                 <div className="form-header">
-                    <h3>Contactez-moi<br/>{props.profile.name}</h3>
-                    <button onClick={() => {
+                    <h2>Contactez-moi<br/>{props.profile.name}</h2>
+                    <button aria-label="Close Contact form" onClick={() => {
                                 let modal = document.getElementById("form-wrapper");
                                 modal.style.display = "none";
                     }}>
@@ -13,14 +13,14 @@ function Intro(props) {
                     </button>
                 </div>
                 <label>Prénom</label>
-                <input name="firstname" type="text" />   
+                <input name="firstname" aria-label="First name" type="text" />   
                 <label>Nom</label>
-                <input name="lastname" type="text" />   
+                <input name="lastname" aria-label="Last name" type="text" />   
                 <label>Email</label>
-                <input name="email" type="email" />
+                <input name="email" aria-label="Email" type="email" />
                 <label>Votre message</label>
-                <textarea name="message"></textarea>
-                <input type="submit" value="Envoyer"/>
+                <textarea name="message" aria-label="Your message"></textarea>
+                <input type="submit" aria-label="Send" value="Envoyer"/>
             </form>
         </div>
         <div className="intro">
@@ -31,13 +31,13 @@ function Intro(props) {
                 <ul className="taglist">
                     {props.profile.tags.map((tag, i) => {
                         return (  
-                            <li key={i}>#{tag}</li>
+                            <li aria-label={tag} key={i}>#{tag}</li>
                         )
                     })}
                 </ul>
             </div>
             <div className="center-part">
-                <button onClick={() => {
+                <button aria-label="Contact me" onClick={() => {
                             let modal = document.getElementById("form-wrapper");
                             modal.style.display = "flex";
                 }}>

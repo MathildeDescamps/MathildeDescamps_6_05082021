@@ -17,6 +17,7 @@ function Gallery(props) {
                 <div className="filter">
                     <p>Trier par</p> 
                     <select 
+                        aria-label="Order by"
                         id="filter" 
                         value={filter} 
                         //Quand le filtre change, on met à jour l'odre des medias:

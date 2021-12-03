@@ -5,7 +5,7 @@ function Banner() {
     return (
         <div className="banner">
             <Link to={'/'}>
-                <img src={logo} alt='FishEye' className='logo' />
+                <img src={logo} alt='FishEye Home Page' className='logo' />
             </Link>
         </div>
     )

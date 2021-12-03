@@ -182,7 +182,7 @@ function Medias(props) {
                                 <div key={index} className="media">
                                     <img    src={process.env.PUBLIC_URL + '/' + mediaFolder + '/' + media.image} 
                                             tabIndex="0"
-                                            alt={media.title} 
+                                            alt={media.title + ", closeup view"} 
                                             className="gallery-media" 
                                             id={index}
                                             onClick={() => {
@@ -215,7 +215,7 @@ function Medias(props) {
                                             type="video" 
                                             controls 
                                             height="300"
-                                            alt={media.title}
+                                            alt={media.title + ", closeup view" }
                                             className="gallery-media" 
                                             id={index} 
                                             onClick={() => {
@@ -246,15 +246,15 @@ function Medias(props) {
 
             {/* LIGHTBOX */}
             { lightboxDisplay &&
-                <div id="lightbox" onClick={hideLightBox}>
+                <div id="lightbox" aria-label="Image closeup view" onClick={hideLightBox}>
 
                     {/* Cross button to close the lightbox */}
-                    <svg className="cross-icon" onClick={hideLightBox} width="25" height="25" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" tabIndex="0" onKeyPress={(event) => {if (event.key === 'Enter') {hideLightBox()} }}  >
+                    <svg className="cross-icon" onClick={hideLightBox} width="25" height="25" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" tabIndex="0" aria-label="Close dialog" onKeyPress={(event) => {if (event.key === 'Enter') {hideLightBox()} }}  >
                         <path d="M42 4.23L37.77 0L21 16.77L4.23 0L0 4.23L16.77 21L0 37.77L4.23 42L21 25.23L37.77 42L42 37.77L25.23 21L42 4.23Z" fill="#901C1C"/>
                     </svg>
 
                     {/* Left arrow button to display the previous media */}
-                    <button className="previous" tabIndex="0" onClick={(e) => {
+                    <button className="previous" tabIndex="0" aria-label="Previous image" onClick={(e) => {
                                                                                                         e.stopPropagation();
                                                                                                         showPrevious(mediaToShow);
                                                                                                     }} 
@@ -272,13 +272,13 @@ function Medias(props) {
                                 Sorry, your browser doesn't support embedded videos.
                             </video>
                         :
-                            <img id="lightbox-img" src={mediaToShow} />
+                            <img id="lightbox-img" src={mediaToShow} alt={mediaTitle}/>
                         }
                         <p>{mediaTitle}</p>
                     </div>
 
                     {/* Right arrow button to display the next media */}
-                    <button className="next" tabIndex="0" onClick={(e) => {
+                    <button className="next" tabIndex="0" aria-label="Next image" onClick={(e) => {
                                                                         e.stopPropagation();
                                                                         showNext(mediaToShow);
                                                                     }}

@@ -34,7 +34,7 @@
                 justify-content: space-between;
                 align-items: baseline;
             }
-            h3 {
+            h2 {
                 font-size: 40px;
                 line-height: 60px;
                 font-weight: normal;
@@ -138,6 +138,8 @@
                 border-radius: 5px;
                 &:hover {
                     cursor: pointer;
+                    background: #DB8876;
+                    color: black;
                 }
             }
         }

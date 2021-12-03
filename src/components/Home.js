@@ -65,7 +65,7 @@ function Home(props) {
                                     <div className="photograph-container">
                                         <Link to={'/profile/'+photograph.id} >
                                             <img src={props.url + 'photographers-profile-pics/' + photograph.portrait } alt={photograph.name} />
-                                            <h2 className="name">{photograph.name}</h2>
+                                            <h2 className="name" aria-label={photograph.name}>{photograph.name}</h2>
                                         </Link>
                                         <p className="location">{photograph.city + ', ' + photograph.country}</p>
                                         <p className="tagline">{photograph.tagline}</p>
