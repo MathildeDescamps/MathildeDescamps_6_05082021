@@ -154,27 +154,32 @@
           }
         }
     }
+    .mobile-button {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1000px) {
     .profilePage {
         .intro {
-            flex-direction: column;
-            align-items: center;
-            :nth-child(1) {
-                order: 2;
-            }
-            :nth-child(2) {
-                order: 3;
-            }
-            :nth-child(3) {
-                order: 1;
-                margin-bottom: 20px;
-            }
             .left-part {
-                text-align: center;
+                max-width: 60%;
                 .taglist {
                     justify-content: center;
+                }
+            }
+            .center-part {
+                display: none;
+            }
+            .right-part {
+                text-align: end;
+                max-width: 40%;
+                img {
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 50%;
+                    min-height: auto;
+                    min-width: auto;
                 }
             }
         }
@@ -192,20 +197,94 @@
                 }
             }
         }
+        .mobile-button {
+            display: flex;
+            position: sticky;
+            bottom: 15px;
+            right: 0;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 40px;
+            max-width: 80%;
+            max-height: 40px;
+            background-color: #901C1C;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border: none;
+            border-radius: 5px;
+            margin: auto;
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 768px) {
-    .profilePage #form-wrapper form {
-        width: 50%;
+    .profilePage {
+        max-width: 90%;
+        #form-wrapper form {
+            width: 50%;
+        }
+        .intro {
+            align-items: center;
+            .left-part {
+                h1 {
+                    font-size: 32px;
+                }
+                .taglist {
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    li {
+                        margin-top: 5px;
+                    }
+                }
+            }
+            .right-part {
+                img {
+                    width: 140px;
+                    height: 140px;
+                }
+            }
+        }
     }
 }
 
 @media screen and (max-width: 500px) {
-        .profilePage #form-wrapper form {
-            width: 80%;
-            max-width: 80%;
-            max-height: 100%;
-            overflow-y: scroll;
+        .profilePage {
+             #form-wrapper form {
+                width: 80%;
+                max-width: 80%;
+                max-height: 100%;
+                overflow-y: scroll;
+            }
+            .intro {
+                flex-direction: column;
+                text-align: center;
+                :nth-child(1) {
+                    order: 2;
+                }
+                :nth-child(3) {
+                    order: 1;
+                }
+                .left-part {
+                    max-width: 100%;
+                    .taglist {
+                        justify-content: center;
+                    }
+                }
+                .right-part {
+                    max-width: 100%;
+                    img {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
         }
 }

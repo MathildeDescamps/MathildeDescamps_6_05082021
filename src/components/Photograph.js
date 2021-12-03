@@ -21,6 +21,12 @@ function Photograph(props) {
         <div className="profilePage">
             <Intro url={props.url} profile={profile} index={i}/>
             <Gallery profileId={profile.id} profile={profile} medias={medias} />
+            <button className="mobile-button" onClick={() => {
+                            let modal = document.getElementById("form-wrapper");
+                            modal.style.display = "flex";
+            }}>
+                Contactez-moi
+            </button>
         </div>
     );
 }

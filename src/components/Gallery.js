@@ -22,7 +22,7 @@ function Gallery(props) {
                         //Quand le filtre change, on met à jour l'odre des medias:
                         onChange={e => {
                             setFilter(e.target.value);
-                            setItems(_.orderBy([...items], [e.target.value], filter === 'title' ? 'asc' : 'desc'));
+                            setItems(_.orderBy([...items], [e.target.value]));
                         }}
                     >
                         <option value='likes' defaultValue>Popularité</option>

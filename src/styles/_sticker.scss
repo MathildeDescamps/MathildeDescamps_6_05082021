@@ -27,7 +27,13 @@
     }
 }
 
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 1000px) {
+    .sticker-wrapper {
+        display: none;
+    }
+}
+
+/* @media screen and (max-width: 499px) {
     .sticker-wrapper {
         justify-content: center;
         width: 100%;
@@ -39,4 +45,4 @@
             padding-inline: 20px;
         }
     }
-}
+} */

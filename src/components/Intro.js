@@ -41,7 +41,7 @@ function Intro(props) {
                             let modal = document.getElementById("form-wrapper");
                             modal.style.display = "flex";
                 }}>
-                    Contact button
+                    Contactez-moi
                 </button>
             </div>
             <div className="right-part">
