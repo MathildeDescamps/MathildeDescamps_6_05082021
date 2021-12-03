@@ -181,6 +181,7 @@ function Medias(props) {
                             return (
                                 <div key={index} className="media">
                                     <img    src={process.env.PUBLIC_URL + '/' + mediaFolder + '/' + media.image} 
+                                            tabIndex="0"
                                             alt={media.title} 
                                             className="gallery-media" 
                                             id={index}
@@ -188,6 +189,13 @@ function Medias(props) {
                                                 showImage(process.env.PUBLIC_URL + '/' + mediaFolder + '/' + media.image, media.title);
                                                 currentIndex = index;
                                             }}
+                                            onKeyPress={(event) => {
+                                                if (event.key === 'Enter') {
+                                                  document.activeElement.click();
+                                                }
+                                            }
+            
+                                            }
                                     />
                                     <div className="media-infos">
                                         <p>{media.title}</p>
@@ -203,6 +211,7 @@ function Medias(props) {
                             return (
                                 <div key={index} className="media">
                                     <video  autoPlay 
+                                            tabIndex="0"
                                             type="video" 
                                             controls 
                                             height="300"
@@ -212,6 +221,11 @@ function Medias(props) {
                                             onClick={() => {
                                                 showImage(process.env.PUBLIC_URL + '/' + mediaFolder + '/' + media.video, media.title);
                                             }} 
+                                            onKeyPress={(event) => {
+                                                if (event.key === 'Enter') {
+                                                  document.activeElement.click();
+                                                }
+                                            }}
                                     >
                                         <source src={process.env.PUBLIC_URL + '/' + mediaFolder + '/' + media.video} type="video/mp4" className="source"/>
                                         Sorry, your browser doesn't support embedded videos.
@@ -235,15 +249,21 @@ function Medias(props) {
                 <div id="lightbox" onClick={hideLightBox}>
 
                     {/* Cross button to close the lightbox */}
-                    <svg className="cross-icon" onClick={hideLightBox} width="25" height="25" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="cross-icon" onClick={hideLightBox} width="25" height="25" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" tabIndex="0" onKeyPress={(event) => {if (event.key === 'Enter') {hideLightBox()} }}  >
                         <path d="M42 4.23L37.77 0L21 16.77L4.23 0L0 4.23L16.77 21L0 37.77L4.23 42L21 25.23L37.77 42L42 37.77L25.23 21L42 4.23Z" fill="#901C1C"/>
                     </svg>
 
                     {/* Left arrow button to display the previous media */}
-                    <button className="previous" onClick={(e) => {
-                                                                                e.stopPropagation();
-                                                                                showPrevious(mediaToShow);
-                                                                            }} 
+                    <button className="previous" tabIndex="0" onClick={(e) => {
+                                                                                                        e.stopPropagation();
+                                                                                                        showPrevious(mediaToShow);
+                                                                                                    }} 
+                                                                                                    onKeyPress={(event) => {
+                                                                                                        if (event.key === 'Enter') {
+                                                                                                            event.stopPropagation();
+                                                                                                            showPrevious(mediaToShow);
+                                                                                                        }
+                                                                                                    }}    
                     >
                         <svg width="25" viewBox="0 0 30 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M29.6399 42.36L11.3199 24L29.6399 5.64L23.9999 -2.46532e-07L-0.000107861 24L23.9999 48L29.6399 42.36Z" fill="#901C1C"/>
@@ -264,10 +284,17 @@ function Medias(props) {
                     </div>
 
                     {/* Right arrow button to display the next media */}
-                    <button className="next" onClick={(e) => {
-                                e.stopPropagation();
-                                showNext(mediaToShow);
-                            }} >
+                    <button className="next" tabIndex="0" onClick={(e) => {
+                                                                        e.stopPropagation();
+                                                                        showNext(mediaToShow);
+                                                                    }}
+                                                                    onKeyPress={(event) => {
+                                                                        if (event.key === 'Enter') {
+                                                                            event.stopPropagation();
+                                                                            showNext(mediaToShow);
+                                                                        }
+                                                                    }}    
+                     >
                         <svg width="25" viewBox="0 0 30 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.360108 5.64L18.6801 24L0.360107 42.36L6.00011 48L30.0001 24L6.00011 3.88195e-06L0.360108 5.64Z" fill="#901C1C"/>
                         </svg>
