@@ -43,12 +43,48 @@
             border-radius: 5px;
             max-height: 100%;
             height: 500px;
+            max-width: 100%;
             object-position: center;
             object-fit: cover;
         }
         p {
             color: #901C1C;
             font-size: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 910px) {
+    #lightbox .media img, 
+    #lightbox .media video {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #lightbox {
+        justify-content: center;
+        .previous, 
+        .next {
+            position: absolute;
+            bottom: 5%;
+        }
+        .previous {
+            left: 39%;
+        }
+        .next {
+            right: 39%;
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #lightbox {
+        .previous {
+            left: 20%;
+        }
+        .next {
+            right: 20%;
         }
     }
 }
