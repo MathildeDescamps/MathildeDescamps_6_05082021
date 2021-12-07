@@ -182,7 +182,7 @@ function Medias(props) {
                                 <div key={index} className="media">
                                     <img    src={process.env.PUBLIC_URL + '/' + mediaFolder + '/' + media.image} 
                                             tabIndex="0"
-                                            alt={media.title + ", closeup view"} 
+                                            alt={media.altText} 
                                             className="gallery-media" 
                                             id={index}
                                             onClick={() => {
@@ -215,7 +215,7 @@ function Medias(props) {
                                             type="video" 
                                             controls 
                                             height="300"
-                                            alt={media.title + ", closeup view" }
+                                            alt={media.altText}
                                             className="gallery-media" 
                                             id={index} 
                                             onClick={() => {
