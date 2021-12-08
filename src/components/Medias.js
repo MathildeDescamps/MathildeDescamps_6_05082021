@@ -1,4 +1,3 @@
-import { indexOf } from "lodash";
 import { useState } from "react";
 
 function Medias(props) {

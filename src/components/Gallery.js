@@ -19,7 +19,7 @@ function Gallery(props) {
                     <select 
                         aria-label="Order by"
                         id="filter" 
-                        value={filter} 
+                        value={filter}
                         //Quand le filtre change, on met à jour l'odre des medias:
                         onChange={e => {
                             setFilter(e.target.value);
