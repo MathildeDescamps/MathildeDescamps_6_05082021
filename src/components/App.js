@@ -13,9 +13,10 @@ function App() {
   const photographers = data.photographers;
   const medias = data.media;
   let publicUrl =  process.env.PUBLIC_URL;
+  console.log(publicUrl);
 
   return (
-    <Router>
+    <Router basename='/MathildeDescamps_6_05082021'>
       <div className="App">
       </div>
       <Switch>
