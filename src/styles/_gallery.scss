@@ -42,6 +42,9 @@
                 min-height: 75%;
                 object-position: center;
                 object-fit: cover;
+                &:hover {
+                    cursor: pointer;
+                }
             }
             .media-infos {
                 display: flex;

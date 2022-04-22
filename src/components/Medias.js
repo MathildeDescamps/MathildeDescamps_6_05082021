@@ -6,6 +6,9 @@ function Medias(props) {
     let mediaFolder = props.name.split(" ")[0];
     let currentIndex;
     let totalLikes = 0;
+    medias.forEach(media => {
+            console.log(media.likes);
+    });
 
     //State that defines whether the lightbox is displayed or not :
     const [lightboxDisplay, setLightBoxDisplay] = useState(false);
