@@ -16,7 +16,7 @@ function App() {
   console.log(publicUrl);
 
   return (
-    <Router basename='https://mathildedescamps.github.io/MathildeDescamps_6_05082021/'>
+    <Router basename='/'>
       <div className="App">
       </div>
       <Switch>
