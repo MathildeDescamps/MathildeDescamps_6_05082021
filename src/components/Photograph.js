@@ -11,7 +11,7 @@ function Photograph(props) {
     let i;
 
     photographers.map((photograph, index) => {
-        if(photograph.id.toString() == idUrl) {
+        if(photograph.id.toString() === idUrl) {
             profile = photograph;
             i = index;
             profileId = profile.id;
